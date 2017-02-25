@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-    <title>Hello</title>
-    <h1>Play Audio</h1>
+    <title>B e e</title>
     <audio id="audio1">
         <source src="barakamon-mandom.mp3" type="audio/mpeg">
         <script>
-            var i = 1.0;
+            var i = 0.5;
             var code;
+            var images = new Array();
+            setImages(images);
+
             function playAudioFunc(){
+                RandomizeImage('beeImage');
                 document.getElementById('beeImage').style.visibility='visible';
                 var myaudio = document.getElementById("audio1");
                 myaudio.playbackRate = i;
                 myaudio.play();
                 i+=0.1;
             }
+
             function GetKey(e){
                 if(!e){
                     var e = window.event;
@@ -30,9 +34,42 @@
                     playAudioFunc();
                 }
             }
+
+            function setImages(image_array){
+                image_array[0] = new Image();
+                image_array[0].src = 'images/bee1.jpg';
+
+                image_array[1] = new Image();
+                image_array[1].src = 'images/bee2.jpg';
+
+                image_array[2] = new Image();
+                image_array[2].src = 'images/bee3.jpg';
+
+                image_array[3] = new Image();
+                image_array[3].src = 'images/bee4.jpg';
+
+                image_array[4] = new Image();
+                image_array[4].src = 'images/bee5.jpg';
+
+                image_array[5] = new Image();
+                image_array[5].src = 'images/bee6.jpg';
+            }
+
+            function RandomizeImage(element){
+                var img = document.getElementById(element);
+			    var x = Math.floor((Math.random() * 5) + 1);
+			    document.getElementById(element).src = images[x].src;
+		    }
+
         </script>
     </audio>
     <body onkeydown="GetKey()">
-        <img id="beeImage" src="_K2dab55.jpg" style="visibility:hidden"/>
+        <font face="American Typewriter"><center><h1 id="title">The Bee Website but every time you press "b", Barry gets bigger and "bee" is said faster</h1></center></font>
+        <img id="beeImage" src="images/bee1.jpg" style="visibility:hidden"/>
     </body>
+    <style>
+		body{
+			background-color: #ffff00
+		}
+	</style>
 </html>
