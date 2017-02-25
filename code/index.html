@@ -4,17 +4,29 @@
         <source src="audio/Bee.mp3" type="audio/mpeg">
         <script>
             var i = 0.5;
+            var j = 10;
             var code;
             var images = new Array();
             setImages(images);
 
             function playAudio_DisplayImageFunc(){
                 RandomizeImage('beeImage');
+                var a = Math.floor((Math.random() * 500) + 1);
+                var b = Math.floor((Math.random() * 1000) + 1);
                 document.getElementById('beeImage').style.visibility='visible';
+                document.getElementById('beeImage').style.top = a+"px";
+                document.getElementById('beeImage').style.left = b+"px";
+                var yourImg = document.getElementById('beeImage');
+                if(yourImg && yourImg.style) {
+                    var x = 100 + j;
+                    yourImg.style.height = x+'px';
+                    yourImg.style.width = x+'px';
+                }
                 var myaudio = document.getElementById("audio1");
                 myaudio.playbackRate = i;
                 myaudio.play();
                 i+=0.1;
+                j+=50;
             }
 
             function GetKey(e){
@@ -51,7 +63,7 @@
     </audio>
     <body onkeydown="GetKey()">
         <font face="American Typewriter"><center><h1 id="title">The Bee Website but every time you press "b", Barry gets bigger and "bee" is said faster</h1></center></font>
-        <img id="beeImage" src="images/bee1.png" style="visibility:hidden"/>
+        <img id="beeImage" src="images/bee1.png" style="visibility:hidden; position:absolute"/>
     </body>
     <style>
 		body{
