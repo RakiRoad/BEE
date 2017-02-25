@@ -1,14 +1,14 @@
 <!DOCTYPE html>
     <title>B e e</title>
     <audio id="audio1">
-        <source src="barakamon-mandom.mp3" type="audio/mpeg">
+        <source src="audio/Bee.mp3" type="audio/mpeg">
         <script>
             var i = 0.5;
             var code;
             var images = new Array();
             setImages(images);
 
-            function playAudioFunc(){
+            function playAudio_DisplayImageFunc(){
                 RandomizeImage('beeImage');
                 document.getElementById('beeImage').style.visibility='visible';
                 var myaudio = document.getElementById("audio1");
@@ -26,12 +26,12 @@
                 }else if(e.which){
                     code = e.which;
                 }
-                setTimeout('playAudioOnKeyPress('+code+');', 100);
+                setTimeout('playAudio_DisplayImageFuncOnKeyPress('+code+');', 100);
             }
 
-            function playAudioOnKeyPress(character){
+            function playAudio_DisplayImageFuncOnKeyPress(character){
                 if(character == 66){
-                    playAudioFunc();
+                    playAudio_DisplayImageFunc();
                 }
             }
 
