@@ -25,7 +25,11 @@
                 var myaudio = document.getElementById("audio1");
                 myaudio.playbackRate = i;
                 myaudio.play();
-                i+=0.1;
+
+                if (i<1.5){
+                    i+=0.1;
+                }
+                
                 j+=50;
             }
 
