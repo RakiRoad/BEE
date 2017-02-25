@@ -1,21 +1,17 @@
 <!DOCTYPE html>
     <title>Hello</title>
     <h1>Play Audio</h1>
-    <button onclick="playAudioFunc()">Click</button>
-    <audio id="audio1" controls>
+    <audio id="audio1">
         <source src="barakamon-mandom.mp3" type="audio/mpeg">
         <script>
             var i = 1.0;
             var code;
-
-
-
             function playAudioFunc(){
-                document.getElementById('loadingImage').style.visibility='visible';
+                document.getElementById('beeImage').style.visibility='visible';
                 var myaudio = document.getElementById("audio1");
                 myaudio.playbackRate = i;
                 myaudio.play();
-                i+=0.2;
+                i+=0.1;
             }
             function GetKey(e){
                 if(!e){
@@ -37,6 +33,6 @@
         </script>
     </audio>
     <body onkeydown="GetKey()">
-        <img id="loadingImage" src="_K2dab55.jpg" style="visibility:hidden"/>
+        <img id="beeImage" src="_K2dab55.jpg" style="visibility:hidden"/>
     </body>
 </html>
