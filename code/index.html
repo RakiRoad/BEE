@@ -36,28 +36,15 @@
             }
 
             function setImages(image_array){
-                image_array[0] = new Image();
-                image_array[0].src = 'images/bee1.png';
-
-                image_array[1] = new Image();
-                image_array[1].src = 'images/bee2.png';
-
-                image_array[2] = new Image();
-                image_array[2].src = 'images/bee3.png';
-
-                image_array[3] = new Image();
-                image_array[3].src = 'images/bee4.png';
-
-                image_array[4] = new Image();
-                image_array[4].src = 'images/bee5.png';
-
-                image_array[5] = new Image();
-                image_array[5].src = 'images/bee6.png';
+                for(i = 0; i < 8; i++){
+                    image_array[i] = new Image();
+                    image_array[i].src = 'images/bee' + (i+1) + '.png';
+                }
             }
 
             function RandomizeImage(element){
                 var img = document.getElementById(element);
-			    var x = Math.floor(Math.random() * 6);
+			    var x = Math.floor(Math.random() * 8);
 			    document.getElementById(element).src = images[x].src;
 		    }
 
