@@ -48,9 +48,10 @@
             }
 
             function setImages(image_array){
-                for(i = 0; i < 8; i++){
-                    image_array[i] = new Image();
-                    image_array[i].src = 'images/bee' + (i+1) + '.png';
+                var m;
+                for(m = 0; m < 8; m++){
+                    image_array[m] = new Image();
+                    image_array[m].src = 'images/bee' + (m+1) + '.png';
                 }
             }
 
