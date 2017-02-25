@@ -22,10 +22,10 @@
                 }else if(e.which){
                     code = e.which;
                 }
-                setTimeout('DoStuff('+code+');', 100);
+                setTimeout('playAudioOnKeyPress('+code+');', 100);
             }
 
-            function playAudioOnKeyPress(character, k){
+            function playAudioOnKeyPress(character){
                 if(character == 66){
                     playAudioFunc();
                 }
