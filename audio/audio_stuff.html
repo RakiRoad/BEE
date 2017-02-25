@@ -7,7 +7,11 @@
         <script>
             var i = 1.0;
             var code;
+
+
+
             function playAudioFunc(){
+                document.getElementById('loadingImage').style.visibility='visible';
                 var myaudio = document.getElementById("audio1");
                 myaudio.playbackRate = i;
                 myaudio.play();
@@ -33,6 +37,6 @@
         </script>
     </audio>
     <body onkeydown="GetKey()">
-        
+        <img id="loadingImage" src="_K2dab55.jpg" style="visibility:hidden"/>
     </body>
 </html>
