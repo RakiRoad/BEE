@@ -1,5 +1,8 @@
 <!DOCTYPE html>
     <title>B e e</title>
+    <audio autoplay>
+        <source src="audio/yalikejazz.mp3" type="audio/mpeg">
+    </audio>
     <audio id="audio1">
         <source src="audio/Bee.mp3" type="audio/mpeg">
         <script>
@@ -53,7 +56,7 @@
 
             function setImages(image_array){
                 var m;
-                for(m = 0; m < 8; m++){
+                for(m = 0; m < 10; m++){
                     image_array[m] = new Image();
                     image_array[m].src = 'images/bee' + (m+1) + '.png';
                 }
