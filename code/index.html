@@ -8,6 +8,7 @@
         <script>
             var i = 0.5;
             var j = 10;
+            var count = 0;
             var code;
             var images = new Array();
             setImages(images);
@@ -17,9 +18,16 @@
                 var a = Math.floor((Math.random() * 500) -100);
                 var b = Math.floor((Math.random() * 1000) -100);
                 document.getElementById('beeImage').style.visibility='visible';
-                document.getElementById('beeImage').style.top = a+"px";
-                document.getElementById('beeImage').style.left = b+"px";
+                    if(count >= 30){
+                        document.getElementById('beeImage').style.left = "-250px";
+                        document.getElementById('beeImage').style.top = "-250px";
+                    }
+                else{
+                    document.getElementById('beeImage').style.top = a+"px";
+                    document.getElementById('beeImage').style.left = b+"px";
+                }
                 var yourImg = document.getElementById('beeImage');
+                
                 if(yourImg && yourImg.style) {
                     var x = 100 + j;
                     yourImg.style.height = x+'px';
@@ -40,7 +48,7 @@
                 if (i<3.8){
                     i+=0.1;
                 }
-
+                count += 1;
                 j+=50;
             }
 
